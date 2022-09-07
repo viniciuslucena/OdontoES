@@ -1,4 +1,4 @@
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/334048702a8e4a6b8dc2bedef7d65a95)](https://www.codacy.com/gh/OdontoLovers/OdontoES/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=OdontoLovers/OdontoES&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/84718693f37d4e45af32fcd0ad92f051)](https://www.codacy.com/gh/OdontoLovers/OdontoES/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=OdontoLovers/OdontoES&amp;utm_campaign=Badge_Grade)
 # Sistema de Gerenciamento de Consultório Odontológico
 ## :octocat: Integrantes
 [José Daniel](https://github.com/JoseDanielF) | [Alex Silva](https://github.com/alexlsilva7) | [Vinicius Lucena](https://github.com/viniciuslucena) | [Arthur Costa](https://github.com/arthur007110) | [Antonio Bezerra](https://github.com/antoniobezerra01) | [Pedro Almeida](https://github.com/)
