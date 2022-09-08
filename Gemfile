@@ -71,7 +71,7 @@ group :test do
   gem "webdrivers"
 end
 
-group :production do
+group :production, :actions do
   gem 'pg'
   gem 'activerecord-postgresql-adapter'
 end
