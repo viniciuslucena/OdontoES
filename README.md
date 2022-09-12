@@ -5,7 +5,7 @@
 ## :page_with_curl: Sobre o Projeto
 Projeto para implementação de um SaaS em Ruby e Rails com foco no servidor para a disciplina de __Engenharia de Software__ ministrado pelo Professor Dr. [Rodrigo Andrade](https://github.com/rcaa), da UFAPE, referente ao período de 2022.1 com intuito de avaliação para a 2ª Verificação de Aprendizagem.
 O projeto se dá por um sistema para um consultorio odontologico. Sistema esse que irá ajudar a administrar consultas afim de se obter uma melhor organização quanto aos serviços oferecidos pelo consultorio.
-*   [Site no Heroku](https://www.heroku.com/) :robot:
+*   [Site no Heroku](https://shrouded-headland-94891.herokuapp.com/) :robot:
 
 ## :round_pushpin: Objetivos
 O sistema possui 3 tipos de usuários e tem como objetivo gerenciar as consultas de um
