@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :pacientes
+  get 'auth_page/index'
   devise_for :admins
   get 'home_page/index'
   resources :pacientes
@@ -6,5 +8,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  root to: 'home_page#index'
+  root to: 'auth_page#index'
 end
