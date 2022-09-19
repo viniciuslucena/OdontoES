@@ -1,2 +1,13 @@
-<h1>AuthPage#index</h1>
-<p>Find me in app/views/auth_page/index.html.erb</p>
+  <div  class="container col-md-6" style="background-color: #FFFFFF; padding: 16px;">
+      <div  class="row justify-content-center align-items-center">
+          <div  class="col-md-8">
+            <%= image_tag 'logo.jpg' , class:"figure-img img-fluid rounded" , style: "display: block;  margin-left: auto;  margin-right: auto;  width: 50%;"%>
+            <h3 class="text-center pb-5">Odonto Lovers</h3>
+            <%= link_to "Entrar como Paciente", new_paciente_session_path, class: "btn btn-primary btn-lg btn-block"%>
+            <%= link_to "Entrar como Admin", new_admin_session_path, class: "btn btn-primary btn-lg btn-block"%>
+          </div>
+        </div>
+  </div>
+
+
+
