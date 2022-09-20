@@ -4,12 +4,8 @@ class HomePageController < ApplicationController
   end
 
   def require_login
-    unless admin_signed_in?
+    unless admin_signed_in? or paciente_signed_in?
       redirect_to auth_page_index_path
-    else
-      unless paciente_signed_in?
-        redirect_to auth_page_index_path
-      end
     end
   end
 end

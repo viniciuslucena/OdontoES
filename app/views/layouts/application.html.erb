@@ -22,14 +22,25 @@
     </div>
 
   <% if admin_signed_in? %>
+      <h6 class="pr-5"><%=current_admin.nome%> - Admin</h6>
       <%= link_to "Sair", destroy_admin_session_path, method: :delete  %>
-
   <% elsif paciente_signed_in? %>
+      <h6 class="pr-5"><%=current_paciente.nome%> - Admin</h6>
       <%= link_to "Sair", destroy_paciente_session_path, method: :delete  %>
   <% end %>
   </nav>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <% if notice %>
+      <div class="alert alert-primary" role="alert">
+        <p><%= notice %></p>
+      </div>
+    <% end %>
+    <% if alert %>
+      <div class="alert alert-secondary" role="alert">
+        <p><%= alert %></p>
+      </div>
+    <% end %>
+
+
     <%= yield %>
   </body>
 </html>
