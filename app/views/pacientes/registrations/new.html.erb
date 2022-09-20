@@ -8,6 +8,11 @@
         <%= render "pacientes/shared/error_messages", resource: resource %>
 
         <div class="field">
+          <%= form.label :nome %>
+          <%= form.text_field :nome %>
+        </div>
+
+        <div class="field">
           <%= f.label :email %><br />
           <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
         </div>
