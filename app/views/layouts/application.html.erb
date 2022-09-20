@@ -29,8 +29,18 @@
       <%= link_to "Sair", destroy_paciente_session_path, method: :delete  %>
   <% end %>
   </nav>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <% if notice %>
+      <div class="alert alert-primary" role="alert">
+        <p><%= notice %></p>
+      </div>
+    <% end %>
+    <% if alert %>
+      <div class="alert alert-secondary" role="alert">
+        <p><%= alert %></p>
+      </div>
+    <% end %>
+
+
     <%= yield %>
   </body>
 </html>
