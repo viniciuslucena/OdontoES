@@ -8,6 +8,11 @@
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= render "admins/shared/error_messages", resource: resource %>
 
+        <div>
+          <%= f.label :nome %><br />
+          <%= f.text_field :nome, autofocus: true %>
+        </div>
+
         <div class="field">
           <%= f.label :email %><br />
           <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
