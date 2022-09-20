@@ -1,6 +1,9 @@
 require "cpf_cnpj"
 
 class Paciente < ApplicationRecord
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
+         
   validates :nome, presence: true, length: {in: 5..40}
   validate :data_nascimento_valida
   validate :cpf_valido

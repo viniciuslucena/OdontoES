@@ -1,0 +1,14 @@
+<div  class="container col-md-6" style="background-color: #FFFFFF; padding: 16px;">
+  <div  class="row justify-content-center align-items-center">
+    <div  class="col-md-8 text-center">
+      <%= image_tag 'logo.jpg' , class:"figure-img img-fluid rounded" , style: "display: block;  margin-left: auto;  margin-right: auto;  width: 50%;"%>
+      <p>Welcome <%= @email %>!</p>
+
+      <p>You can confirm your account email through the link below:</p>
+
+      <p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+
+    </div>
+  </div>
+</div>
+
