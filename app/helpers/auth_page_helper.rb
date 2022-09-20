@@ -1,0 +1,2 @@
+module AuthPageHelper
+end
