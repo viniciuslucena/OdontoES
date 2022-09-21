@@ -3,10 +3,12 @@ Rails.application.routes.draw do
   get 'auth_page/index'
   devise_for :admins
   get 'home_page/index'
-
+  resources :pacientes, only: [:edit,:destroy, :update]
   devise_scope :admin do
     authenticated :admin do
       get "/admins/sign_out" => 'devise/sessions#destroy'
+      get "/pacientes/" => 'pacientes#index'
+      get "/pacientes/:id" => 'pacientes#show'
     end
 
   end
