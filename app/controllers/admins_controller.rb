@@ -22,7 +22,7 @@ class AdminsController < ApplicationController
   # POST /admins or /admins.json
   def create
     @admin = Admin.new(admin_params)
-
+    print "Admin: #{@admin}"
     respond_to do |format|
       if @admin.save
         format.html { redirect_to admin_url(@admin), notice: "Admin was successfully created." }
@@ -49,11 +49,13 @@ class AdminsController < ApplicationController
 
   # DELETE /admins/1 or /admins/1.json
   def destroy
-    @admin.destroy
+    unless @admin.email == "admin@admin.com"
+      @admin.destroy
 
-    respond_to do |format|
-      format.html { redirect_to admins_url, notice: "Admin was successfully destroyed." }
-      format.json { head :no_content }
+      respond_to do |format|
+        format.html { redirect_to admins_url, notice: "Admin was successfully destroyed." }
+        format.json { head :no_content }
+      end
     end
   end
 
@@ -65,6 +67,6 @@ class AdminsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def admin_params
-      params.fetch(:admin, {})
+      params.require(:admin).permit(:nome, :email, :password, :password_confirmation)
     end
 end

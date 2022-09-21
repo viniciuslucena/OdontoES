@@ -13,7 +13,7 @@
 
     <tbody>
     <% @admins.each do |admin| %>
-      <%unless current_admin.email == "admin@admin.com"%>
+      <%unless admin.email == "admin@admin.com"%>
         <tr>
           <td><%= admin.id %></td>
           <td><%= admin.nome %></td>
