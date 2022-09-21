@@ -1,10 +1,8 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @paciente %>
-
 <div>
-  <%= link_to "Edit this paciente", edit_paciente_path(@paciente) %> |
-  <%= link_to "Back to pacientes", pacientes_path %>
-
-  <%= button_to "Destroy this paciente", @paciente, method: :delete %>
+  <%= link_to "Voltar", pacientes_path , class:"btn btn-light"%> |
+  <%= link_to "Editar", edit_paciente_path(@paciente), class:"btn btn-primary"%> |
+  <%= button_to "Apagar", @paciente, method: :delete, class: "btn btn-warning" %>
 </div>
