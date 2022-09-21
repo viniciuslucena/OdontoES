@@ -1,10 +1,15 @@
-<h1>Editing admin</h1>
-
-<%= render "form", admin: @admin %>
-
-<br>
-
-<div>
-  <%= link_to "Show this admin", @admin %> |
-  <%= link_to "Back to admins", admins_path %>
+<div  class="container col-md-6" style="background-color: #FFFFFF; padding: 16px;">
+  <div  class="row justify-content-center align-items-center">
+    <div  class="col-md-8 text-center">
+      <h1>Editar admin</h1>
+      <%= render "form", admin: @admin %>
+      <br>
+      <div>
+        <%= link_to "Show this admin", @admin %> |
+        <%= link_to "Back to admins", admins_path %>
+      </div>
+    </div>
+  </div>
 </div>
+
+

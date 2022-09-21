@@ -1,8 +1,13 @@
-<p style="color: green"><%= notice %></p>
-
-<%= render @paciente %>
-<div>
-  <%= link_to "Voltar", pacientes_path , class:"btn btn-light"%> |
-  <%= link_to "Editar", edit_paciente_path(@paciente), class:"btn btn-primary"%> |
-  <%= button_to "Apagar", @paciente, method: :delete, class: "btn btn-warning" %>
+<div  class="container col-md-6" style="background-color: #FFFFFF; padding: 16px;">
+  <div  class="row justify-content-center align-items-center">
+    <div  class="col-md-8">
+      <%= render @paciente %>
+      <div class="row">
+        <%= link_to "Voltar", pacientes_path , class:"btn btn-primary mr-3"%>
+        <%= link_to "Editar", edit_paciente_path(@paciente), class:"btn btn-primary mr-3"%>
+        <%= button_to "Apagar", @paciente, method: :delete, class: "btn btn-warning" %>
+      </div>
+    </div>
+  </div>
 </div>
+
