@@ -86,6 +86,7 @@ GEM
       xpath (~> 3.2)
     childprocess (4.1.0)
     concurrent-ruby (1.1.10)
+    cpf_cnpj (0.5.0)
     crass (1.0.6)
     cucumber (7.1.0)
       builder (~> 3.2, >= 3.2.4)
@@ -288,6 +289,7 @@ DEPENDENCIES
   activerecord-postgresql-adapter
   bootsnap
   capybara
+  cpf_cnpj
   cucumber-rails
   database_cleaner
   debug
