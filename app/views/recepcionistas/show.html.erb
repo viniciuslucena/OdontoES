@@ -1,10 +1,13 @@
-<p style="color: green"><%= notice %></p>
-
-<%= render @recepcionista %>
-
-<div>
-  <%= link_to "Edit this recepcionista", edit_recepcionista_path(@recepcionista) %> |
-  <%= link_to "Back to recepcionistas", recepcionistas_path %>
-
-  <%= button_to "Destroy this recepcionista", @recepcionista, method: :delete %>
+<div  class="container col-md-6" style="background-color: #FFFFFF; padding: 16px;">
+  <div  class="row justify-content-center align-items-center">
+    <div  class="col-md-8">
+      <%= render @recepcionista %>
+      <div class="row">
+        <%= link_to "Voltar", recepcionistas_path , class:"btn btn-primary mr-3"%>
+        <%= link_to "Editar", edit_recepcionista_path(@recepcionista), class:"btn btn-primary mr-3"%>
+        <%= button_to "Apagar", @recepcionista, method: :delete, class: "btn btn-warning" %>
+      </div>
+    </div>
+  </div>
 </div>
+
