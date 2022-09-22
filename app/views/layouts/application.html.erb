@@ -27,6 +27,9 @@
   <% elsif paciente_signed_in? %>
       <h6 class="pr-5"><%=current_paciente.nome%> - Paciente</h6>
       <%= link_to "Sair", destroy_paciente_session_path, method: :delete  %>
+  <% elsif recepcionista_signed_in? %>
+  <h6 class="pr-5"><%=current_recepcionista.nome%> - Recepcionista</h6>
+  <%= link_to "Sair", destroy_recepcionista_session_path, method: :delete  %>
   <% end %>
   </nav>
     <% if notice %>
