@@ -1,0 +1,32 @@
+<%= form_with(model: recepcionista) do |form| %>
+  <% if recepcionista.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(recepcionista.errors.count, "error") %> prohibited this recepcionista from being saved:</h2>
+
+      <ul>
+        <% recepcionista.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :nome, style: "display: block" %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div>
+    <%= form.label :cpf, style: "display: block" %>
+    <%= form.text_field :cpf %>
+  </div>
+
+  <div>
+    <%= form.label :email, style: "display: block" %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

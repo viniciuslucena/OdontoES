@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @recepcionista %>
+
+<div>
+  <%= link_to "Edit this recepcionista", edit_recepcionista_path(@recepcionista) %> |
+  <%= link_to "Back to recepcionistas", recepcionistas_path %>
+
+  <%= button_to "Destroy this recepcionista", @recepcionista, method: :delete %>
+</div>
