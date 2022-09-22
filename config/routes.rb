@@ -18,6 +18,8 @@ Rails.application.routes.draw do
       get "/admins/" => 'admins#index'
       post "/admins/" => 'admins#create'
       post "/pacientes" => 'pacientes#create'
+      get "/recepcionistas/" => 'recepcionistas#index'
+      post "/recepcionistas" => 'recepcionistas#create'
     end
   end
 
