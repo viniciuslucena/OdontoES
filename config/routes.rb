@@ -21,10 +21,18 @@ Rails.application.routes.draw do
     end
   end
 
+  devise_scope :recepcionista do
+    authenticated :recepcionista do
+      get "/recepcionistas/sign_out" => 'devise/sessions#destroy'
+    end
+  end
+
   devise_for :pacientes
   resources :pacientes
   devise_for :admins
   resources :admins
+  devise_for :recepcionistas
+  resources :recepcionistas
 
 
 
