@@ -11,27 +11,37 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :nome, style: "display: block" %>
-    <%= form.text_field :nome %>
+  <div class="form-group row">
+    <%= form.label :nome %>
+    <%= form.text_field :nome ,class:"form-control"%>
+  </div>
+
+  <div class="form-group row">
+    <%= form.label :data_nascimento %>
+    <%= form.date_field :data_nascimento,class:"form-control" %>
+  </div>
+
+  <div class="form-group row">
+    <%= form.label :cpf %>
+    <%= form.text_field :cpf,class:"form-control" %>
+  </div>
+
+  <div class="form-group row">
+    <%= form.label :email %>
+    <%= form.text_field :email,class:"form-control" %>
+  </div>
+
+  <div class="form-group row">
+    <%= form.label :password %>
+    <%= form.password_field :password, autocomplete: "new-password",class:"form-control" %>
+  </div>
+
+  <div class="form-group row">
+    <%= form.label :password_confirmation %>
+    <%= form.password_field :password_confirmation, autocomplete: "new-password",class:"form-control" %>
   </div>
 
   <div>
-    <%= form.label :data_nascimento, style: "display: block" %>
-    <%= form.date_field :data_nascimento %>
-  </div>
-
-  <div>
-    <%= form.label :cpf, style: "display: block" %>
-    <%= form.text_field :cpf %>
-  </div>
-
-  <div>
-    <%= form.label :email, style: "display: block" %>
-    <%= form.text_field :email %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+    <%= form.submit class:"btn btn-primary"%>
   </div>
 <% end %>

@@ -1,0 +1,30 @@
+<div class="container">
+  <h2 style="display: inline-block; ">Admins</h2>
+  <%= link_to 'Novo Admin', new_admin_path ,class:"m-3 btn btn-primary" %>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Nome</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @admins.each do |admin| %>
+      <%unless admin.email == "admin@admin.com"%>
+        <tr>
+          <td><%= admin.id %></td>
+          <td><%= admin.nome %></td>
+          <td><%= admin.email %></td>
+          <td><%= link_to "Exibir", admin %></td>
+        </tr>
+      <%end%>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+
+
+

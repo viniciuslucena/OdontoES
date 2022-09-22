@@ -1,0 +1,19 @@
+<div  class="container col-md-6" style="background-color: #FFFFFF; padding: 16px;">
+  <div  class="row justify-content-center align-items-center">
+    <div  class="col-md-8">
+      <%= render @admin %>
+
+      <div class="row">
+        <%= link_to "Voltar", admins_path, class:"btn btn-primary mr-3" %>
+        <%= link_to "Editar", edit_admin_path(@admin), class:"btn btn-primary mr-3" %>
+        <%unless @admin.email == "admin@admin.com"%>
+          <%= button_to "Apagar", @admin, method: :delete , class:"btn btn-warning"%>
+        <%end%>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
