@@ -1,0 +1,13 @@
+<div  class="container col-md-6" style="background-color: #FFFFFF; padding: 16px;">
+  <div  class="row justify-content-center align-items-center">
+    <div  class="col-md-8 text-center">
+      <h1>Editar recepcionista</h1>
+      <%= render "form", recepcionista: @recepcionista %>
+      <br>
+      <div>
+        <%= link_to "Exibir recepcionista", @recepcionista %> |
+        <%= link_to "Voltar para recepcionistas", recepcionistas_path %>
+      </div>
+    </div>
+  </div>
+</div>
