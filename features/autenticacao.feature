@@ -23,5 +23,19 @@ Feature: Autenticacao
     And clico em Login
     Then eu vejo a mensagem 'Signed in successfully.'
 
+  Scenario: Logar como admin padrao com senha errada
+    Given estou na tela de login de admin
+    When eu preencho os campos de Email 'admin@admin.com', Senha '9876787878'
+    And clico em Login
+    Then eu vejo a mensagem 'Invalid Email or password.'
+
+  Scenario: Logar como admin padrao com email vazio
+    Given estou na tela de login de admin
+    When eu preencho os campos de Email '', Senha '9876787878'
+    And clico em Login
+    Then eu vejo a mensagem 'Email can\'t be blank'
+
+
+
 
 

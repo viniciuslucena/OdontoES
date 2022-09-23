@@ -28,8 +28,9 @@ end
 
 Given('estou na tela inicial') do
   visit '/home_page/index'
+  page.has_content?('HomePage')
 end
 
 When('eu clico em sair') do
-  click_button 'Sair'
+  find('div.sair', text: 'sair').click_link('sair')
 end
