@@ -18,6 +18,14 @@ Rails.application.routes.draw do
       get "/admins/" => 'admins#index'
       post "/admins/" => 'admins#create'
       post "/pacientes" => 'pacientes#create'
+      get "/recepcionistas/" => 'recepcionistas#index'
+      post "/recepcionistas" => 'recepcionistas#create'
+    end
+  end
+
+  devise_scope :recepcionista do
+    authenticated :recepcionista do
+      get "/recepcionistas/sign_out" => 'devise/sessions#destroy'
     end
   end
 
@@ -25,6 +33,8 @@ Rails.application.routes.draw do
   resources :pacientes
   devise_for :admins
   resources :admins
+  devise_for :recepcionistas
+  resources :recepcionistas
 
 
 

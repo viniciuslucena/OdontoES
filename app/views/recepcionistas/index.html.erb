@@ -1,0 +1,32 @@
+<p style="color: green"><%= notice %></p>
+
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+  <h2 style="display: inline-block; ">Pacientes</h2>
+  <%= link_to 'Novo Recepcionista', new_recepcionista_path,class:"m-3 btn btn-primary" %>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Nome</th>
+      <th>Cpf</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @recepcionistas.each do |recepcionista| %>
+      <tr>
+        <td><%= recepcionista.id %></td>
+        <td><%= recepcionista.nome %></td>
+        <td><%= recepcionista.cpf %></td>
+        <td><%= recepcionista.email %></td>
+        <td><%= link_to  "Exibir", "/recepcionistas/#{recepcionista.id}",class:"btn btn-primary" %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+
