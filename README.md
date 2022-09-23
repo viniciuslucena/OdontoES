@@ -4,7 +4,7 @@
 [José Daniel](https://github.com/JoseDanielF) | [Alex Silva](https://github.com/alexlsilva7) | [Vinicius Lucena](https://github.com/viniciuslucena) | [Arthur Costa](https://github.com/arthur007110) | [Antonio Bezerra](https://github.com/antoniobezerra01) | [Pedro Almeida](https://github.com/)
 ## :page_with_curl: Sobre o Projeto
 Projeto para implementação de um SaaS em Ruby e Rails com foco no servidor para a disciplina de __Engenharia de Software__ ministrado pelo Professor Dr. [Rodrigo Andrade](https://github.com/rcaa), da UFAPE, referente ao período de 2022.1 com intuito de avaliação para a 2ª Verificação de Aprendizagem.
-O projeto se dá por um sistema para um consultorio odontologico. Sistema esse que irá ajudar a administrar consultas afim de se obter uma melhor organização quanto aos serviços oferecidos pelo consultorio.
+O projeto se dá por um sistema para um consultorio odontologico. Sistema esse que irá administrar os serviços oferecidos pelo consultório.
 *   [Site no Heroku](https://shrouded-headland-94891.herokuapp.com/) :robot:
 
 ## :round_pushpin: Objetivos
@@ -35,4 +35,4 @@ deve ficar registrada no sistema, horário, nome do dentista, paciente, etc.)
 ## :construction: Status do Projeto
 Em andamento
 ## :keyboard: Acessando o sistema
-Você poderá fazer Login no sistema com o CPF x e Senha y
+Você poderá fazer Login no sistema com email admin@admin.com e senha 987654321
