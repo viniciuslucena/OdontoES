@@ -15,7 +15,7 @@ class Paciente < ApplicationRecord
     end
   end
   def nascimentoEhValido
-    if(data_nascimento.present? && data_nascimento > Date.today)
+    if(data_nascimento.present? && data_nascimento > Time.zone.today)
       errors.add(:data_nascimento, '- Insira uma data anterior a atual')
     end
   end
