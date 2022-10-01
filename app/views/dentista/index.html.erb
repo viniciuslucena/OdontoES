@@ -22,9 +22,9 @@
         <td><%= dentistum.id %></td>
         <td><%= dentistum.nome %></td>
         <td><%= dentistum.telefone %></td>
-        <td><%= dentistum.cro %></td>
-        <td><%= dentistum.cfp %></td>
-        <td><%= link_to  "Exibir", "/dentistas/#{dentistas.id}",class:"btn btn-primary" %></td>
+        <td><%= dentistum.CRO%></td>
+        <td><%= dentistum.cpf%></td>
+        <td><%= link_to  "Exibir", "/dentista/#{dentistum.id}",class:"btn btn-primary" %></td>
       </tr>
     <% end %>
     </tbody>

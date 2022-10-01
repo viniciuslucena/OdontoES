@@ -4,7 +4,7 @@
       <%= render @dentistum %>
       <div class="row">
         <%= link_to "Voltar", dentista_path , class:"btn btn-primary mr-3"%>
-        <%= link_to "Editar", edit_dentistum_path(@paciente), class:"btn btn-primary mr-3"%>
+        <%= link_to "Editar", edit_dentistum_path(@dentistum), class:"btn btn-primary mr-3"%>
         <%= button_to "Apagar", @dentistum, method: :delete, class: "btn btn-warning" %>
       </div>
     </div>
