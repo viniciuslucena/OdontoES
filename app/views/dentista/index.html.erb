@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="container">
+  <h2 style="display: inline-block; ">Dentistas</h2>
+  <%= link_to 'Novo Dentista', new_dentistum_path,class:"m-3 btn btn-primary" %>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Nome</th>
+      <th>Telefone</th>
+      <th>CRO</th>
+      <th>CPF</th>
+      <th colspan="3"></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @dentista.each do |dentistum| %>
+      <tr>
+        <td><%= dentistum.id %></td>
+        <td><%= dentistum.nome %></td>
+        <td><%= dentistum.telefone %></td>
+        <td><%= dentistum.CRO%></td>
+        <td><%= dentistum.cpf%></td>
+        <td><%= link_to  "Exibir", "/dentista/#{dentistum.id}",class:"btn btn-primary" %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>

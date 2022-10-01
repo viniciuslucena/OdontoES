@@ -1,0 +1,16 @@
+class Dentistum < ApplicationRecord
+
+  validates :nome, presence: true, length: {in: 5..40}
+  validates :CRO, presence: true, length: { minimum: 3, maximum: 7}
+  validate :cpf_valido
+  validates :telefone,:presence => true,
+            :numericality => true,
+            :length => { :minimum => 10, :maximum => 15 }
+
+  def cpf_valido
+    if cpf.present? && !CPF.valid?(cpf)
+      errors.add(:cpf, 'formato ou numero errado')
+    end
+  end
+
+end

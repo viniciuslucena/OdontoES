@@ -1,0 +1,13 @@
+<div  class="container col-md-6" style="background-color: #FFFFFF; padding: 16px;">
+  <div  class="row justify-content-center align-items-center">
+    <div  class="col-md-8 text-center">
+      <h1>Editar Dentista</h1>
+      <%= render "form", dentistum: @dentistum %>
+      <br>
+      <div>
+        <%= link_to "Exibir dentistas", @dentistum %> |
+        <%= link_to "Voltar para dentistas", dentista_path %>
+      </div>
+    </div>
+  </div>
+</div>
