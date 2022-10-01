@@ -1,10 +1,12 @@
-<p style="color: green"><%= notice %></p>
-
-<%= render @dentistum %>
-
-<div>
-  <%= link_to "Edit this dentistum", edit_dentistum_path(@dentistum) %> |
-  <%= link_to "Back to dentista", dentista_path %>
-
-  <%= button_to "Destroy this dentistum", @dentistum, method: :delete %>
+<div  class="container col-md-6" style="background-color: #FFFFFF; padding: 16px;">
+  <div  class="row justify-content-center align-items-center">
+    <div  class="col-md-8">
+      <%= render @dentistum %>
+      <div class="row">
+        <%= link_to "Voltar", dentista_path , class:"btn btn-primary mr-3"%>
+        <%= link_to "Editar", edit_dentistum_path(@paciente), class:"btn btn-primary mr-3"%>
+        <%= button_to "Apagar", @dentistum, method: :delete, class: "btn btn-warning" %>
+      </div>
+    </div>
+  </div>
 </div>

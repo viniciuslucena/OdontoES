@@ -11,27 +11,27 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :nome, style: "display: block" %>
-    <%= form.text_field :nome %>
+  <div class="form-group row">
+    <%= form.label :nome %>
+    <%= form.text_field :nome,class:"form-control" %>
+  </div>
+
+  <div class="form-group row">
+    <%= form.label :telefone %>
+    <%= form.text_field :telefone, class:"form-control" %>
+  </div>
+
+  <div class="form-group row">
+    <%= form.label :CRO %>
+    <%= form.text_field :CRO, class:"form-control" %>
+  </div>
+
+  <div class="form-group row">
+    <%= form.label :cpf %>
+    <%= form.text_field :cpf, class:"form-control" %>
   </div>
 
   <div>
-    <%= form.label :telefone, style: "display: block" %>
-    <%= form.text_field :telefone %>
-  </div>
-
-  <div>
-    <%= form.label :CRO, style: "display: block" %>
-    <%= form.text_field :CRO %>
-  </div>
-
-  <div>
-    <%= form.label :cpf, style: "display: block" %>
-    <%= form.text_field :cpf %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+    <%= form.submit class:"btn btn-primary" %>
   </div>
 <% end %>
