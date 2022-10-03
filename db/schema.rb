@@ -29,6 +29,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_01_111617) do
     t.string "telefone"
     t.string "CRO"
     t.string "cpf"
+    t.string "especialidade"
+    t.string "horario_inicio"
+    t.string "horario_fim"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

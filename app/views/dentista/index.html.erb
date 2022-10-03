@@ -12,6 +12,9 @@
       <th>Telefone</th>
       <th>CRO</th>
       <th>CPF</th>
+      <th>Especialidade</th>
+      <th>Horário Inicio</th>
+      <th>Horário Fim</th>
       <th colspan="3"></th>
     </tr>
     </thead>
@@ -24,6 +27,9 @@
         <td><%= dentistum.telefone %></td>
         <td><%= dentistum.CRO%></td>
         <td><%= dentistum.cpf%></td>
+        <td><%= dentistum.especialidade%></td>
+        <td><%= dentistum.horario_inicio%></td>
+        <td><%= dentistum.horario_fim%></td>
         <td><%= link_to  "Exibir", "/dentista/#{dentistum.id}",class:"btn btn-primary" %></td>
       </tr>
     <% end %>
