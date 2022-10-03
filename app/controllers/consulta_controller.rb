@@ -3,7 +3,7 @@ class ConsultaController < ApplicationController
 
   # GET /consulta or /consulta.json
   def index
-    @consulta = Consultum.all
+    @consulta = Consultum.all.sort_by(&:data_hora)
   end
 
   # GET /consulta/1 or /consulta/1.json
@@ -22,16 +22,38 @@ class ConsultaController < ApplicationController
   # POST /consulta or /consulta.json
   def create
     @consultum = Consultum.new(consultum_params)
-
-    respond_to do |format|
-      if @consultum.save
-        format.html { redirect_to consultum_url(@consultum), notice: "Consultum was successfully created." }
-        format.json { render :show, status: :created, location: @consultum }
+    # se a hora for inconpativel com o horario de atendimento do dentista
+    puts "dentista_id: #{params}"
+    if  params["consultum"]["dentistum_id"] != ""
+      if @consultum.data_hora.hour > @consultum.dentistum.horario_fim.hour || @consultum.data_hora.hour < @consultum.dentistum.horario_inicio.hour
+        respond_to do |format|
+          format.html { redirect_to new_consultum_url, notice: "O horario de atendimento do dentista #{@consultum.dentistum.nome} é das #{@consultum.dentistum.horario_inicio.hour}h as #{@consultum.dentistum.horario_fim.hour}h" }
+          format.json { render json: @consultum.errors, status: :unprocessable_entity }
+        end
       else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @consultum.errors, status: :unprocessable_entity }
+        respond_to do |format|
+          if @consultum.save
+            format.html { redirect_to @consultum, notice: "Consultum was successfully created." }
+            format.json { render :show, status: :created, location: @consultum }
+          else
+            format.html { render :new, status: :unprocessable_entity }
+            format.json { render json: @consultum.errors, status: :unprocessable_entity }
+          end
+        end
+      end
+    else
+      respond_to do |format|
+        if @consultum.save
+          format.html { redirect_to @consultum, notice: "Consultum was successfully created." }
+          format.json { render :show, status: :created, location: @consultum }
+        else
+          format.html { render :new, status: :unprocessable_entity }
+          format.json { render json: @consultum.errors, status: :unprocessable_entity }
+        end
       end
     end
+
+
   end
 
   # PATCH/PUT /consulta/1 or /consulta/1.json
