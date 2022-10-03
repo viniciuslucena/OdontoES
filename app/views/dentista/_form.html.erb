@@ -31,6 +31,21 @@
     <%= form.text_field :cpf, class:"form-control" %>
   </div>
 
+  <div class="form-group row">
+    <%= form.label :especialidade %>
+    <%= form.text_field :especialidade, class:"form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :horario_inicio %>
+    <%= form.select(:horario_inicio, ['07:00', '08:00', '09:00', '10:00', '11:00', '12:00'], class:"form-control")%>
+  </div>
+
+  <div class="field">
+    <%= form.label :horario_fim %>
+    <%= form.select(:horario_fim, ['13:00', '14:00', '15:00', '16:00', '17:00', '18:00'], class:"form-control")%>
+  </div>
+
   <div>
     <%= form.submit class:"btn btn-primary" %>
   </div>
