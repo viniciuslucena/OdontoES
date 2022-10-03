@@ -28,8 +28,8 @@
         <td><%= dentistum.CRO%></td>
         <td><%= dentistum.cpf%></td>
         <td><%= dentistum.especialidade%></td>
-        <td><%= dentistum.horario_inicio%></td>
-        <td><%= dentistum.horario_fim%></td>
+        <td><%= dentistum.horario_inicio.strftime("%H:%M")%></td>
+        <td><%= dentistum.horario_fim.strftime("%H:%M")%></td>
         <td><%= link_to  "Exibir", "/dentista/#{dentistum.id}",class:"btn btn-primary" %></td>
       </tr>
     <% end %>

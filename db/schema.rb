@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_01_111617) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_03_172051) do
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -29,11 +29,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_01_111617) do
     t.string "telefone"
     t.string "CRO"
     t.string "cpf"
-    t.string "especialidade"
-    t.string "horario_inicio"
-    t.string "horario_fim"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.time "horario_inicio"
+    t.time "horario_fim"
+    t.string "especialidade"
   end
 
   create_table "pacientes", force: :cascade do |t|
