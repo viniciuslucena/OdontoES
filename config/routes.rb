@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   resources :dentista
 
-
   get 'auth_page/index'
 
   get 'home_page/index'
@@ -21,6 +20,8 @@ Rails.application.routes.draw do
       post "/pacientes" => 'pacientes#create'
       get "/recepcionistas/" => 'recepcionistas#index'
       post "/recepcionistas" => 'recepcionistas#create'
+      get "/dentista/" => 'dentista#index'
+      post "/dentista" => 'dentista#create'
     end
   end
 
@@ -36,6 +37,7 @@ Rails.application.routes.draw do
   resources :admins
   devise_for :recepcionistas
   resources :recepcionistas
+
 
 
 

@@ -6,6 +6,7 @@ class Dentistum < ApplicationRecord
   validates :telefone,:presence => true,
             :numericality => true,
             :length => { :minimum => 10, :maximum => 15 }
+  validates :especialidade, presence: true, length: {in: 4..20}
 
   def cpf_valido
     if cpf.present? && !CPF.valid?(cpf)

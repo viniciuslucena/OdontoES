@@ -65,6 +65,6 @@ class DentistaController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def dentistum_params
-      params.require(:dentistum).permit(:nome, :telefone, :CRO, :cpf)
+      params.require(:dentistum).permit(:nome, :telefone, :CRO, :cpf, :especialidade, :horario_inicio, :horario_fim)
     end
 end
