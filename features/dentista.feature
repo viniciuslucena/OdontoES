@@ -36,3 +36,9 @@ Feature: dentista
     When preencho o campo de Cro em Dentista '123456789'
     And clico em Update Dentistum
     Then eu vejo a mensagem de erro ao editar dentista com cro invalido
+
+  Given estou logado com o administrador com o usuario 'admin@admin.com' e senha '987654321'
+    And que existe um dentista de Nome 'Vinicius', Telefone '81971133619', CRO '12345', CPF '070.126.704-60', Especialidade 'Ortodondia', Horario inicio '07:00', Horario fim '14:00'
+    And estou na pagina do dentista com nome 'Vinicius'
+    And clico em Destroy
+    Then eu vejo a mensagem de dentista removido com sucesso
