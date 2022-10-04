@@ -36,3 +36,11 @@ end
 When('preencho o campo de Cro {string}') do |nome|
   fill_in 'dentistum[nome]', :with => nome
 end
+
+When('preencho o campo de Cpf em Dentista {string}') do |cpf|
+  fill_in 'dentistum[cpf]', :with => cpf
+end
+
+Then('eu vejo a mensagem de erro ao editar dentista') do
+  page.has_content?('Cpf formato ou numero errado')
+end
