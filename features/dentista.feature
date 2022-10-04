@@ -6,6 +6,15 @@ Feature: dentista
   Scenario: Novo dentista
     Given estou logado com o administrador com o usuario 'admin@admin.com' e senha '987654321'
     And estou na tela de criar Dentista
-    When eu preencho os campos de Nome 'Daniel', Telefone '81997128385', CRO '12345', CPF '013.862.694-41', Especialidade 'Ortodondia', Horario inicio "08:00", Horario fim "14:00"
+    When eu preencho os campos de Nome 'Vinicius', Telefone '81971133619', CRO '12345', CPF '070.126.704-60', Especialidade 'Ortodondia', Horario inicio "07:00", Horario fim "14:00"
     And clico em Create Dentistum
     Then eu vejo a mensagem 'Dentistum was successfully created'
+
+  Scenario: Editar um Dentista no sistema
+    Given estou logado com o administrador com o usuario 'admin@admin.com' e senha '987654321'
+    And que existe um dentista de Nome 'Vinicius', Telefone '81971133619', CRO '12345', CPF '070.126.704-60', Especialidade 'Ortodondia', Horario inicio '07:00', Horario fim '14:00'
+    And estou na pagina do dentista com nome 'Vinicius'
+    And clico em Editar
+    When preencho o campo de Cro '98765'
+    And clico em Update Dentistum
+    Then eu vejo a mensagem 'Dentistum was successfully updated.'
