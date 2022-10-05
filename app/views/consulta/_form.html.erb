@@ -10,22 +10,21 @@
       </ul>
     </div>
   <% end %>
-  <div>
+  <div class="form-group row">
     <%= form.label "Dentista:", style: "display: block" %>
-    <%= form.select :dentistum_id, options_for_select(Dentistum.all.map { |dentistum| ["#{dentistum.nome} - #{dentistum.especialidade} | #{dentistum.horario_inicio.hour}h as #{dentistum.horario_fim.hour}h", dentistum.id] }), include_blank: true %>
+    <%= form.select :dentistum_id, options_for_select(Dentistum.all.map { |dentistum| ["#{dentistum.nome} - #{dentistum.especialidade} | #{dentistum.horario_inicio.hour}h as #{dentistum.horario_fim.hour}h", dentistum.id] }), include_blank: true, class:"form-control" %>
   </div>
-  <% puts("dentista: [#{@consultum.dentistum_id}]") %>
-  <div>
+  <div class="form-group row">
     <%= form.label "Paciente:", style: "display: block" %>
     <%= form.select :paciente_id, options_for_select(Paciente.all.map { |paciente| [paciente.nome, paciente.id] }, consultum.paciente_id), include_blank: true %>
   </div>
 
-  <div>
+  <div class="form-group row">
     <%= form.label "Data e hora da Consulta", style: "display: block" %>
     <%= form.datetime_select :data_hora, start_hour: 7, end_hour: 17, :minute_step => 30, order: [:day, :month, :year] %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit class:"btn btn-primary" %>
   </div>
 <% end %>

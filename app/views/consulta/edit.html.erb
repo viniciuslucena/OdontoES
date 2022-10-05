@@ -1,10 +1,13 @@
-<h1>Editing consultum</h1>
-
-<%= render "form", consultum: @consultum %>
-
-<br>
-
-<div>
-  <%= link_to "Show this consultum", @consultum %> |
-  <%= link_to "Back to consulta", consulta_path %>
+<div  class="container col-md-6" style="background-color: #FFFFFF; padding: 16px;">
+  <div  class="row justify-content-center align-items-center">
+    <div  class="col-md-8 text-center">
+      <h1>Editar Consulta</h1>
+      <%= render "form", consultum: @consultum %>
+      <br>
+      <div>
+        <%= link_to "Exibir consulta", @consultum %> |
+        <%= link_to "Voltar para pacientes", consulta_path %>
+      </div>
+    </div>
+  </div>
 </div>
