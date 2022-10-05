@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :consulta
   resources :dentista
 
   get 'auth_page/index'

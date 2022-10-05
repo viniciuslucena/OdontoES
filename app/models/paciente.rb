@@ -1,5 +1,6 @@
 require "cpf_cnpj"
 class Paciente < ApplicationRecord
+  has_many :consultums, dependent: :destroy
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,

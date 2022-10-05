@@ -1,4 +1,5 @@
 class Dentistum < ApplicationRecord
+  has_many :consultas, dependent: :destroy
 
   validates :nome, presence: true, length: {in: 5..40}
   validates :CRO, presence: true, length: { minimum: 3, maximum: 7}
