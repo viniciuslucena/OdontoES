@@ -1,4 +1,4 @@
-When('eu preencho os campos de Nome {string}, Telefone {string}, CRO {string}, CPF {string}, Especialidade {string}, Horario inicio {string}, Horario fim {string}') do |nome, telefone, cro, cpf, especialidade, horarioIn, horarioOut|
+When('eu preencho os campos de Nome {string}, Telefone {string}, CRO {string}, CPF {string}, Especialidade {string}') do |nome, telefone, cro, cpf, especialidade|
   fill_in 'dentistum[nome]', :with => nome
   fill_in 'dentistum[telefone]', :with => telefone
   fill_in 'dentistum[CRO]', :with => cro
@@ -14,7 +14,7 @@ When('clico em Create Dentistum') do
   click_button 'Create Dentistum'
 end
 
-Given('que existe um dentista de Nome {string}, Telefone {string}, CRO {string}, CPF {string}, Especialidade {string}, Horario inicio {string}, Horario fim {string}') do |nome, telefone, cro, cpf, especialidade, horarioIn, horarioOut|
+Given('que existe um dentista de Nome {string}, Telefone {string}, CRO {string}, CPF {string}, Especialidade {string}') do |nome, telefone, cro, cpf, especialidade|
   visit '/dentista/new'
   fill_in 'dentistum[nome]', :with => nome
   fill_in 'dentistum[telefone]', :with => telefone
