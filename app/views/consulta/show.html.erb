@@ -1,10 +1,13 @@
-<p style="color: green"><%= notice %></p>
-
-<%= render @consultum %>
-
-<div>
-  <%= link_to "Edit this consultum", edit_consultum_path(@consultum) %> |
-  <%= link_to "Back to consulta", consulta_path %>
-
-  <%= button_to "Destroy this consultum", @consultum, method: :delete %>
+<div  class="container col-md-6" style="background-color: #FFFFFF; padding: 16px;">
+  <div  class="row justify-content-center align-items-center">
+    <div  class="col-md-8 ">
+      <h3 class="pb-4">Consulta</h3>
+      <%= render @consultum %>
+      <div class="row">
+        <%= link_to "Voltar", consulta_path , class:"btn btn-primary mr-3"%>
+        <%= link_to "Editar", edit_consultum_path(@consultum), class:"btn btn-primary mr-3"%>
+        <%= button_to "Apagar", @consultum, method: :delete, class: "btn btn-warning" %>
+      </div>
+    </div>
+  </div>
 </div>
