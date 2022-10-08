@@ -1,5 +1,5 @@
 class PacientesController < ApplicationController
-  before_action :set_paciente, only: %i[ show edit update destroy ]
+  before_action :set_paciente, only: %i[ show edit update destroy minhas_consultas ]
 
   # GET /pacientes or /pacientes.json
   def index
@@ -17,6 +17,11 @@ class PacientesController < ApplicationController
 
   # GET /pacientes/1/edit
   def edit
+  end
+
+  def minhas_consultas
+    @paciente = Paciente.find(params[:id])
+    @consultas = Consultum.where(paciente_id: @paciente.id)
   end
 
   # POST /pacientes or /pacientes.json

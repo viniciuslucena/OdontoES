@@ -1,0 +1,29 @@
+<div class="container">
+  <h2 style="display: inline-block; ">Minhas consultas</h2>
+  <%= link_to 'Nova Consulta', new_consultum_path,class:"m-3 btn btn-primary" %>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Data-hora</th>
+      <th>Paciente</th>
+      <th>Dentista</th>
+      <th colspan="3">Ações</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @consultas.each do |consulta| %>
+      <tr>
+        <td><%= consulta.id %></td>
+        <td><%= consulta.data_hora.strftime("%d/%m/%Y %H:%M") %></td>
+        <td><%= Paciente.find(consulta.paciente_id).nome %></td>
+        <td><%= Dentistum.find(consulta.dentistum_id).nome %></td>
+        <td><%= link_to  "Exibir", consulta ,class:"btn btn-primary" %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+
+

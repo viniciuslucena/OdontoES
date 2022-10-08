@@ -17,7 +17,28 @@
         <li class="nav-item">
           <%= link_to "Inicio", home_page_index_path, class:"nav-link" %>
         </li>
-
+        <% if admin_signed_in? %>
+          <li class="nav-item">
+            <%= link_to "Admins", admins_path, class:"nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Recepcionistas", recepcionistas_path, class:"nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Dentistas", dentista_path, class:"nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Pacientes", pacientes_path, class:"nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Consultas", consulta_path, class:"nav-link" %>
+          </li>
+        <% end %>
+        <% if paciente_signed_in? %>
+          <li class="nav-item">
+            <%= link_to "Minhas Consultas", "/minhas_consultas/#{current_paciente.id}", class:"nav-link" %>
+          </li>
+        <% end %>
       </ul>
     </div>
 

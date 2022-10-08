@@ -4,7 +4,11 @@
       <h3 class="pb-4">Consulta</h3>
       <%= render @consultum %>
       <div class="row">
-        <%= link_to "Voltar", consulta_path , class:"btn btn-primary mr-3"%>
+        <% if paciente_signed_in? %>
+          <%= link_to "Voltar", "/minhas_consultas/#{current_paciente.id}" , class:"btn btn-primary mr-3"%>
+        <% else %>
+          <%= link_to "Voltar", consulta_path , class:"btn btn-primary mr-3"%>
+        <% end %>
         <%= link_to "Editar", edit_consultum_path(@consultum), class:"btn btn-primary mr-3"%>
         <%= button_to "Apagar", @consultum, method: :delete, class: "btn btn-warning" %>
       </div>

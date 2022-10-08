@@ -5,7 +5,12 @@
       <%= render "form", consultum: @consultum %>
       <br>
       <div>
-        <%= link_to "Voltar para consultas", consulta_path %>
+        <% if paciente_signed_in? %>
+          <%= link_to "Voltar", "/minhas_consultas/#{current_paciente.id}"%>
+        <% else %>
+          <%= link_to "Voltar para consultas", consulta_path %>
+        <% end %>
+
       </div>
     </div>
   </div>
