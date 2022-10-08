@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   devise_scope :paciente do
     authenticated :paciente do
       get "/pacientes/sign_out" => "devise/sessions#destroy"
+      get "/minhas_consultas/:id" => "pacientes#minhas_consultas"
     end
   end
 
