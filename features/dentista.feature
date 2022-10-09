@@ -26,7 +26,7 @@ Feature: dentista
     And clico em Editar
     When preencho o campo de Cpf em Dentista '123.456.789-00'
     And clico em Update Dentistum
-    Then eu vejo a mensagem de erro ao editar dentista com cpf invalido
+    Then eu vejo a mensagem de erro 'Cpf formato ou numero errado'
 
   Scenario: Editar um Dentista com CRO invalido
     Given estou logado com o administrador com o usuario 'admin@admin.com' e senha '987654321'
@@ -35,10 +35,10 @@ Feature: dentista
     And clico em Editar
     When preencho o campo de Cro em Dentista '123456789'
     And clico em Update Dentistum
-    Then eu vejo a mensagem de erro ao editar dentista com cro invalido
+    Then eu vejo a mensagem de erro 'Cro is too long (maximum is 7 characters)'
 
   Given estou logado com o administrador com o usuario 'admin@admin.com' e senha '987654321'
     And que existe um dentista de Nome 'Vinicius', Telefone '81971133619', CRO '12345', CPF '070.126.704-60', Especialidade 'Ortodondia'
     And estou na pagina do dentista com nome 'Vinicius'
     And clico em Destroy
-    Then eu vejo a mensagem de dentista removido com sucesso
+    Then eu vejo a mensagem 'Dentistum was successfully destroyed.'
