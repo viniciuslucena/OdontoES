@@ -65,7 +65,3 @@ end
 Given('clico em Destroy') do
   click_button 'Apagar'
 end
-
-Then('eu vejo a mensagem de paciente removido com sucesso') do
-  page.has_content?('Paciente was successfully destroyed.')
-end

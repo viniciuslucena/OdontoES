@@ -57,6 +57,18 @@ class DentistaController < ApplicationController
     end
   end
 
+  def consultar_horarios turno
+    case turno
+    when 'inicio'
+      return %w[07:00 08:00 09:00 10:00 11:00 12:00]
+    when 'fim'
+      return %w[13:00 14:00 15:00 16:00 17:00 18:00]
+    end
+    return
+  end
+
+  helper_method :consultar_horarios
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_dentistum

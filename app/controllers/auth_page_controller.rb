@@ -1,11 +1,16 @@
 class AuthPageController < ApplicationController
   def index
-    if admin_signed_in?
-      redirect_to home_page_index_path
-    elsif paciente_signed_in?
-      redirect_to home_page_index_path
-    elsif recepcionista_signed_in?
+    if verify_if_logged_in
       redirect_to home_page_index_path
     end
+  end
+
+  private
+
+  def verify_if_logged_in
+    return true if admin_signed_in?
+    return true if paciente_signed_in?
+    return true if recepcionista_signed_in?
+    return false
   end
 end

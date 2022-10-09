@@ -40,5 +40,5 @@ Feature: paciente
     And que existe um paciente de Nome 'José Daniel Florêncio Duarte Filho', Data de Nascimento '17/02/2001', CPF '013.862.694-41', Email 'danielduartefilho.df@gmail.com' e Senha '123456'
     And estou na pagina do paciente com nome 'José Daniel Florêncio Duarte Filho'
     And clico em Destroy
-    Then eu vejo a mensagem de paciente removido com sucesso
+    Then eu vejo a mensagem 'Paciente was successfully destroyed.'
 
