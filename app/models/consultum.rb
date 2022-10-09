@@ -18,7 +18,10 @@ class Consultum < ApplicationRecord
 
   def horario_fora_do_expediente
     unless dentistum.nil?
-      if data_hora.hour < dentistum.horario_inicio.hour || data_hora.hour > dentistum.horario_fim.hour
+      antes_do_horario = data_hora.hour < dentistum.horario_inicio.hour
+      depois_do_horario = data_hora.hour > dentistum.horario_fim.hour
+      fora_do_expediente = antes_do_horario || depois_do_horario
+      if fora_do_expediente
         errors.add(:data_hora, "Horário fora do horário do dentista")
       end
     end
