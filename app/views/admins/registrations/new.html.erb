@@ -3,7 +3,7 @@
   <div  class="row justify-content-center align-items-center">
     <div  class="col-md-8 text-center">
       <%= image_tag 'logo.jpg' , class:"figure-img img-fluid rounded" , style: "display: block;  margin-left: auto;  margin-right: auto;  width: 50%;"%>
-      <h2>Sign up</h2>
+      <h2>Cadastrar</h2>
 
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= render "admins/shared/error_messages", resource: resource %>
@@ -19,7 +19,7 @@
         </div>
 
         <div class="field">
-          <%= f.label :password %>
+          <%= f.label "Senha" %>
           <% if @minimum_password_length %>
             <em>(<%= @minimum_password_length %> characters minimum)</em>
           <% end %><br />
@@ -27,7 +27,7 @@
         </div>
 
         <div class="field">
-          <%= f.label :password_confirmation %><br />
+          <%= f.label "Confirmar senha" %><br />
           <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
         </div>
 
