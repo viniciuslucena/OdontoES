@@ -8,13 +8,9 @@ class AuthPageController < ApplicationController
   private
 
   def verify_if_logged_in
-    if admin_signed_in?
-      return true
-    elsif paciente_signed_in?
-      return true
-    elsif recepcionista_signed_in?
-      return true
-    end
-
+    return true if admin_signed_in?
+    return true if paciente_signed_in?
+    return true if recepcionista_signed_in?
+    return false
   end
 end
