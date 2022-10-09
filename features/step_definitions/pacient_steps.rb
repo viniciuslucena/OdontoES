@@ -13,7 +13,7 @@ When('estou logado com o administrador com o usuario {string} e senha {string}')
   visit '/admins/sign_in'
   fill_in 'admin[email]', :with => usuario
   fill_in 'admin[password]', :with => senha
-  click_button 'Log in'
+  click_button 'Entrar'
   page.has_content?('Signed in successfully.')
 end
 When('estou na tela de criar Paciente') do
