@@ -10,6 +10,5 @@
   <%= link_to "Minhas Consultas","/minhas_consultas/#{current_paciente.id}", class: "btn btn-primary p-5 mx-1 my-3" %>
 <% end %>
 <% if recepcionista_signed_in? %>
-  <%= link_to "Gerenciar Consultas", consultas_path, class: "btn btn-primary p-5 mx-1 my-3" %>
+  <%= link_to "Gerenciar Consultas", consulta_path, class: "btn btn-primary p-5 mx-1 my-3" %>
 <% end %>
-
