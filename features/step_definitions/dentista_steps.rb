@@ -44,15 +44,3 @@ end
 When('preencho o campo de Cro em Dentista {string}') do |cpf|
   fill_in 'dentistum[cpf]', :with => cpf
 end
-
-Then('eu vejo a mensagem de erro ao editar dentista com cpf invalido') do
-  page.has_content?('Cpf formato ou numero errado')
-end
-
-Then('eu vejo a mensagem de dentista removido com sucesso') do
-  page.has_content?('Dentistum was successfully destroyed.')
-end
-
-Then('eu vejo a mensagem de erro ao editar dentista com cro invalido') do
-  page.has_content?('Cro is too long (maximum is 7 characters)')
-end
