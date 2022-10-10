@@ -17,10 +17,10 @@ When('clico em Create Consultum') do
   click_button 'Create Consultum'
 end
 
-Given('existe uma consulta para o paciente de Nome {string}') do |nome|
+Given('existe uma consulta para o paciente de Nome {string} e medico {string}') do |paciente, medico|
   visit '/consulta/new'
-  select nome, from: 'consultum_paciente_id'
-  select 'Vinicius', from: 'consultum_dentistum_id'
+  select paciente, from: 'consultum_paciente_id'
+  select medico, from: 'consultum_dentistum_id'
   date_object = DateTime.strptime('07/10/2027 - 10:00', '%d/%m/%Y - %H:%M')
   select date_object.year, from: 'consultum_data_hora_1i'
   select Date::MONTHNAMES[date_object.month], from: 'consultum_data_hora_2i'
