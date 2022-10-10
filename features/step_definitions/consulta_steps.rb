@@ -47,3 +47,7 @@ end
 When('clico em Update Consultum') do
   click_button 'Update Consultum'
 end
+
+When('clico em Apagar') do
+  click_button 'Apagar'
+end
