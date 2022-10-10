@@ -23,7 +23,7 @@ When('eu preencho os campos de Email {string}, Senha {string}') do |email, senha
 end
 
 When('clico em Login') do
-  click_button 'Log in'
+  click_button 'Entrar'
 end
 
 Given('estou na tela inicial') do
